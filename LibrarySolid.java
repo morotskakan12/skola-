@@ -1,4 +1,4 @@
-package enums;
+
 
 public enum LibrarySolid {
 
@@ -14,7 +14,7 @@ public enum LibrarySolid {
 	double meltPoint;
 	double meltEntalpy;
 	
-	SolidTable(double d, double hc, double sp, double se) {
+	LibrarySolid(double d, double hc, double sp, double se) {
 		density = d * 1E3;
 		heatCapacity = hc * 1E3;
 		meltPoint = sp;
