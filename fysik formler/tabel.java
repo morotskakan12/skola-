@@ -23,8 +23,7 @@
 			JScrollPane kort3 = new JScrollPane();
 			tp.addTab("Liquids", kort3);
 			
-			setSize(250,250);
-			setVisible(true);
+			
 				setDefaultCloseOperation(EXIT_ON_CLOSE);
 			
 		}

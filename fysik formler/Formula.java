@@ -12,20 +12,20 @@
 			double Celsius = (kelvin-273.15);
 			return Celsius;
 		}
-		public static double fluidPressure(Constants gravety, double fluid, double deep){// inpot i pogramet välj en vätska.3
+		public static double fluidPressure( double fluid, double deep){// inpot i pogramet välj en vätska.3
 			double p = 0; // Pascals
 			double d = fluid; // densitet
 			double h = deep; //hjupet
-			double g=gravety.TC.konstant ;
+			double g=Constants.TC.konstant ;
 			p = (d*h*g);
 			
 			return p;	
 		}
-		public static double fluidPressure(Constants gravety, LibraryLiquids fluid, double deep){//4
+		public static double fluidPressureT(double deep){//4
 			double p = 0; // Pascals
-			double d = fluid.WATER.density; // densitet
+			double d = LibraryLiquids.WATER.density; // densitet
 			double h = deep; //hjupet
-			double g=gravety.TC.konstant ;
+			double g=Constants.TC.konstant ;
 			p = (d*h*g);
 			
 			return p;	
@@ -36,15 +36,15 @@
 			return energy;
 			
 		}
-		public static double potentialEnergy(Constants gravety, double mass, double height){//6
-			double g=gravety.TC.konstant ;
+		public static double potentialEnergy( double mass, double height){//6
+			double g=Constants.TC.konstant ;
 			double Energi =  mass*height*g;
 			return Energi;
 		}
-		public static double fallSpeed(Constants gravety, double height){//7
-			double g=gravety.TC.konstant ;
-			double time = Math.sqrt(height*g*2);
-			double Acseloreton = (time*g);
+		public static double fallSpeed( double height){//7
+			double g=Constants.TC.konstant ;
+			double Acseloreton = Math.sqrt(height*g*2);
+			
 			return Acseloreton;
 			
 		}
@@ -52,16 +52,16 @@
 			double defrens = first-last;
 			return defrens;
 		}
-		public static double volumeToMass(LibraryLiquids fluid, double volume){//9 anvendare senar välj
-			double mass = fluid.WATER.density/volume;//anvendare senar får välja
+		public static double volumeToMassW(double volume){//9 anvendare senar välj
+			double mass = LibraryLiquids.WATER.density/volume;//anvendare senar får välja
 			return mass;
 		}
-		public static double volumeToMass(LibraryGas gas, double volume){//10 anvendare senar välj
-			double mass = gas.AIR.density*volume;
+		public static double volumeToMassA( double volume){//10 anvendare senar välj
+			double mass = LibraryGas.AIR.density*volume;
 			return mass;
 		}
-		public static double volumeToMass(LibrarySolid solid, double volume){//11 anvendare senar välj
-			double mass= solid.IRON.density*volume;
+		public static double volumeToMassI(double volume){//11 anvendare senar välj
+			double mass= LibrarySolid.IRON.density*volume;
 			return mass;
 		}
 		public static double svtVelocity(double distance, double time){//12
@@ -84,20 +84,20 @@
 			double powoer = work/time;
 			return powoer;
 		}
-		public static double heat(LibrarySolid solid, double mass, double deltaT){//17
-			double energe= solid.IRON.heatCapacity*mass*deltaT;
+		public static double heatI(double mass, double deltaT){//17
+			double energe= LibrarySolid.IRON.heatCapacity*mass*deltaT;
 			return energe;
 		}
-		public static double heat(LibraryLiquids fluld, double volume, double deltaT){//18
-			double energe= fluld.WATER.heatCapacity*volume*deltaT;
+		public static double heatW(double volume, double deltaT){//18
+			double energe= LibraryLiquids.WATER.heatCapacity*volume*deltaT;
 			return energe;
 		}
-		public static double heat(LibraryGas gas, double volume, double deltaT){//19
-			double energe= gas.AIR.heatCapacity*volume*deltaT;
+		public static double heatGas( double volume, double deltaT){//19
+			double energe= LibraryGas.AIR.heatCapacity*volume*deltaT;
 			return energe;
 		}
-		public static double velocityToHeight(Constants gravety, double velocity){//20
-			double time = velocity/gravety.TC.konstant;
+		public static double velocityToHeight( double velocity){//20
+			double time = velocity/Constants.TC.konstant;
 			double ansor = velocity*time;
 			return ansor;
 		}

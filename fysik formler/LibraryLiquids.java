@@ -1,9 +1,5 @@
-package enums;
 
-	
-		
 
-		
 	public enum LibraryLiquids {
 
 		H20(0.998, 4.19, 0, 100, 2260), 
@@ -18,7 +14,7 @@ package enums;
 		double boilPoint;
 		double steamEntalpy;
 	
-		FluidTable(double d, double hc, double sp, double bp, double se) {
+		LibraryLiquids(double d, double hc, double sp, double bp, double se) {
 			density = d * 1E3;
 			heatCapacity = hc * 1E3;
 			meltPoint = sp;
@@ -31,4 +27,3 @@ package enums;
 		
 		
 		
-	}

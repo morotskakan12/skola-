@@ -20,12 +20,24 @@
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
 		}		
 		public void actionPreformed(ActionEvent e){
-			tabel.tabel tabel =new tabel.tabel(); 
-			if (e.getSource() == b1);
-				tabel();
-			else if(e.getSource() == b2);
+			
+			if (e.getSource() == b1);{
+				 Tabel t = new Tabel();
+				 setVisible(false);
+				dispose();
 				
-			else if(e.getSource() == b3);
+			}
+			if(e.getSource() == b2);{
+				setVisible(false);
+				dispose();
+				
+			}
+				
+			if(e.getSource() == b3);{
+				setVisible(false);
+				dispose();
+				
+			}
 
 		}
 		
