@@ -199,7 +199,7 @@ public class Nummber {
 //mehod 10
 	 public static String alleNams() {    //10
 		//skapar aktuella variabler 
-		 String  ansor = "" ;
+		 	String  ansor = "" ;
 			int tims = names.length;
 			String bas;
 			int outnum2 = 0;
@@ -211,6 +211,7 @@ public class Nummber {
 			// avgör hur många namn det fin av ett namn och gar en motsvarande sifra i how
 			for(int i = 0 ; i < tims; i++ ) {
 				bas = names[i];
+				apa= 0;
 				//avgör och lägger till motsvarande sifra.
 				for (int e = 0; e<tims; e++) {
 					
