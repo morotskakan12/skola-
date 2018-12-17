@@ -15,8 +15,7 @@ public class InsertionSort {
         printIntArray(randomNumbers);
 
         // anroper bubblesort-metoden och skriver ut antal iterationer
-        System.out.println("It took " + insertionSort(randomNumbers) + " iterations to sort the int array using" +
-                " bubble sort algorithm.\n");
+        System.out.println("It took " + insertionSort(randomNumbers) + " iterations to sort the int array using" +" bubble sort algorithm.\n");
 
         // skriver ut en sorterad array
         printIntArray(randomNumbers);
@@ -25,45 +24,55 @@ public class InsertionSort {
 	static int insertionSort(int[] randomNumbers) {
 
         // initierar nödvändiga variabler
-        boolean swapped = true;
+       
         int counter = 0;
-
-        // loopen körs tills hela arrayen kollas igenom utan att några tal byter plats med varandra
-        do {
-
-            swapped = false;
-
-            //loopar igenom hela arrayen 1 gång
-            for (int i = 0; i < randomNumbers.length - 1; i++) {
-
-                // jämför två tal bredvid varandra och byter plats på dem om det högra talet är större än det vänstra
-                if (randomNumbers[i] > randomNumbers[i+1]) {
-                    int temp = randomNumbers[i + 1];
-                    randomNumbers[i + 1] = randomNumbers[i];
-                    randomNumbers[i] = temp;
-                    swapped = true; // har åtminstone ett byte skett under körningen så ändras swapped värde till true
-                }
-			while(swapped == true){
-					
-				if (randomNumbers[i+1] < randomNumbers[i]) {
-					int temp = randomNumbers[i + 1];
-                    randomNumbers[i + 1] = randomNumbers[i];
-                    randomNumbers[i] = temp;
-                    swapped = true;
-				}
-				else{
-					swapped = false;
-				}
-					
-                // håller koll på antalet iterationer
-                counter++;
-            }
-
-        } while (swapped); // do-while loopen körs alltid minst en gång
-
-        return counter; // returnerar antalet iterationer
+		//skapar lopp som bestemer index för gämförande sifra
+        for(int i =0; i<randomNumbers.length -1; i++){
+			//skaper variabler som ska kolla sifran efter index
+			int j=i-1;
+			//gämförande mellan sifrona
+			if (randomNumbers[i] > randomNumbers[i+1]) {
+					//byter plats på siforna 
+					int temp = randomNumbers[i+1];
+					randomNumbers[i+1] = randomNumbers[i];
+					randomNumbers[i] = temp;
+					//skapar index plats för sifran som flytas 
+					int k = i;
+					//räkna ett gämförande 
+					counter++;
+					//skaper lopp som ska gämföra med sifran som är bakom index
+					while(j>-1){
+						//gör gämföraande mellan index och sifran bakom 
+						if(randomNumbers[j]>randomNumbers[k]){
+							//byt plats för siforna 
+							temp = randomNumbers[j];
+							randomNumbers[j] = randomNumbers[k];
+							randomNumbers[k] = temp;
+							//uppdatera index
+							k=j;
+							j--;
+							//räkna ett gämförande
+							counter++;
+							
+						}
+						//bryt om gämföraande inte ger posetivt ut fall
+						else{
+							break;
+						}
+					}
+			}
+			
 		}
+		System.out.println("counter: " + counter);
+		return counter; // returnerar antalet iterationer
 	}
+    
+
+        
+
+        
+		
+	
 	 static void printIntArray(int[] randomNumbers) {
 
         for (int j :
