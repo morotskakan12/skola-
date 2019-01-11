@@ -1,34 +1,5 @@
 public class BubbleSort {
-
-    public static void main(String[] args) {
-
-        // skapar en int array av storleken 20
-        int[] randomNumbers = new int[20];
-
-        for (int i = 0; i < randomNumbers.length; i++) {
-
-            // fyller arrayen med 20 slumpmässiga heltal mellan 0 och 20
-            randomNumbers[i] = (int) (Math.random() * 20) + 1;
-        }
-
-        // skriver ut arrayen
-        printIntArray(randomNumbers);
-
-        // anroper bubblesort-metoden och skriver ut antal iterationer
-        System.out.println("It took " + bubbleSort(randomNumbers) + " iterations to sort the int array using" +
-                " bubble sort algorithm.\n");
-
-        // skriver ut en sorterad array
-        printIntArray(randomNumbers);
-    }
-
-    /**
-     * Metoden sorterar heltal i storleksordning med hjälp av bubble sort algoritmen
-     * @param randomNumbers
-     * @return counter
-     */
-
-    static int bubbleSort(int[] randomNumbers) {
+    public static int bubbleSort(int[] randomNumbers) {
 
         // initierar nödvändiga variabler
         boolean swapped = true;
@@ -58,17 +29,4 @@ public class BubbleSort {
         return counter; // returnerar antalet iterationer
     }
 
-    /**
-     * Metoden skriver ut en int array, sorterad eller osorterad
-     * weoiuty randomNumbers
-     */
-    static void printIntArray(int[] randomNumbers) {
-
-        for (int j :
-                randomNumbers) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
-        System.out.println();
-    }
 }
