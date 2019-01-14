@@ -1,77 +1,77 @@
 public class PerformFormula{
-	public static double performFormula(Formula Formele,double impot, double ett, double två){
+	public static double performFormula(double impot, double ett, double två){
 	
 			double svar=0;
 
 			if(impot == 1){
 
-				svar = Formele.fahrenheitToCelsius(ett);
+				svar = Formula.fahrenheitToCelsius(ett);
 
 			} 
 
 			else if(impot == 2 ){
 
-				svar = Formele.kelvinToCelsius(ett);
+				svar = Formula.kelvinToCelsius(ett);
 
 			}
 
 			else if (impot == 3){
 
-				svar= Formele.fluidPressure(ett, två);
+				svar= Formula.fluidPressure(ett, två);
 
 			}
 
 			else if (impot== 4){
 
-				svar= Formele.fluidPressureT(ett);
+				svar= Formula.fluidPressureT(ett);
 
 			}
 
 			else if(impot == 5 ){
 
-			svar =Formele.kineticEnergy(ett,två);
+			svar =Formula.kineticEnergy(ett,två);
 
 			}
 
 			else if(impot == 6 ){
 
-			svar =Formele.potentialEnergy(ett,två);
+			svar =Formula.potentialEnergy(ett,två);
 
 			}
 
 			else if(impot == 7 ){
 
-			svar =Formele.fallSpeed(ett);
+			svar =Formula.fallSpeed(ett);
 
 			}
 
 			else if(impot == 8 ){
 
-			svar =Formele.delta(ett,två);
+			svar =Formula.delta(ett,två);
 
 			}
 
 			else if(impot == 9 ){
 
-			svar =Formele.volumeToMassW(ett);
+			svar =Formula.volumeToMassW(ett);
 
 			}
 
 			else if(impot == 10 ){
 
-			svar =Formele.volumeToMassA(ett);
+			svar =Formula.volumeToMassA(ett);
 
 			}
 
 			else if(impot == 11 ){
 
-			svar =Formele.volumeToMassI(ett);
+			svar =Formula.volumeToMassI(ett);
 
 			}
 
 			else if(impot == 12 ){
 
-			svar =Formele.svtVelocity(ett,två);
+			svar =Formula.svtVelocity(ett,två);
 
 			return svar;
 
@@ -79,49 +79,49 @@ public class PerformFormula{
 
 			else if(impot == 13 ){
 
-			svar =Formele.svtDistance(ett,två);
+			svar =Formula.svtDistance(ett,två);
 
 			}
 
 			else if(impot == 14 ){
 
-			svar =Formele.svtTime(ett,två);
+			svar =Formula.svtTime(ett,två);
 
 			}
 
 			else if(impot == 15 ){
 
-			svar =Formele.work(ett,två);
+			svar =Formula.work(ett,två);
 
 			}
 
 			else if(impot == 16 ){
 
-			svar =Formele.power(ett,två);
+			svar =Formula.power(ett,två);
 
 			}
 
 			else if(impot == 17 ){
 
-			svar =Formele.heatI(ett,två);
+			svar =Formula.heatI(ett,två);
 
 			}
 
 			else if(impot == 18 ){
 
-			svar =Formele.heatW(ett,två);
+			svar =Formula.heatW(ett,två);
 
 			}
 
 			else if(impot == 19 ){
 
-			svar =Formele.heatGas(ett,två);
+			svar =Formula.heatGas(ett,två);
 
 			}
 
 			else if(impot == 20 ){
 
-			svar =Formele.velocityToHeight(ett);
+			svar =Formula.velocityToHeight(ett);
 
 			}
 

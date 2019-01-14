@@ -48,23 +48,26 @@ public class UserPage extends JFrame implements ActionListener{
 		else if (e.getSource () == b5){
 		
 			String strV0TextBox = t1.getText();
+			
 			double impot = Double.parseDouble(strV0TextBox);
-				if (WhichFormal.whichFormal(impot)==1){
+			
+			if (WhichFormal.whichFormal(impot)==0){
 				
+					
 					FormelaImpotOne F = new FormelaImpotOne(impot);
 				
 					setVisible(false);
 
 					dispose();
-				}
-				else {
+			}
+			else if (WhichFormal.whichFormal(impot)==1){
 					
-					//FormelaImpotTwo FIT = new FormelaImpotTwo();
+					FormelaImpotTwo FIT = new FormelaImpotTwo(impot);
 					
 					setVisible(false);
 
 					dispose();
-				}
+			}
 		
 		}
 		
