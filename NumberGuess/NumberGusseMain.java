@@ -3,6 +3,7 @@ public class NumberGusseMain{
 	public static void main( String [] arg){
 		Scanner sc = new Scanner(System.in);
 		int playAgen =0;
+		// skapar en möjlighet att spela igen  
 		do{
 			StartPage SP = new StartPage();
 			System.out.println("want to play again");

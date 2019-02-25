@@ -1,9 +1,12 @@
 import java.util.Scanner;
 public class NummberGame{
 	public static void nummberGame(int index){
+	// initsierar variabler
 	Scanner sc = new Scanner(System.in);
 	int answer = NummberFormela.numberStart(index);
 	int death = 0;
+	int i = 1;
+	// ger nödvändig info
 	if((answer <= 100)&&(answer>0)){
 		System.out.println("Enter a number between 1 and 100");
 	}
@@ -14,7 +17,8 @@ public class NummberGame{
 		System.out.println("Enter a number between 1 and 1000");
 	} 
 		int inpot = sc.nextInt();
-		int i = 1;
+		
+		// splelar spel
 	while(answer != inpot){
 		death = Correct.correct(inpot,answer);
 		i++;
