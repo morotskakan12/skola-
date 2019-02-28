@@ -1,4 +1,5 @@
 public class Correct{
+// rättnig 
 	 public static int correct(int inpot,int answer){
 		 int inxdex = 0;
 		 // gerletråd

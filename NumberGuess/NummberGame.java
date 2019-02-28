@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class NummberGame{
+	// maunet spel
 	public static void nummberGame(int index){
 	// initsierar variabler
 	Scanner sc = new Scanner(System.in);

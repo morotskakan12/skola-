@@ -12,7 +12,7 @@ public class StartPage{
 			System.out.println("2. between 1-500 ");
 			System.out.println("3. between 1-1000");
 			System.out.println("4. computer solve");
-			// ska byta till swits case
+			// vilket spel man vill spela 
 			int index = sc.nextInt();
 			if(index>=5){
 				// om anvendan är en idiot och inte kan ta info

@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class NumberGusseMain{
+	// maine mitod + omstart
+	
 	public static void main( String [] arg){
 		Scanner sc = new Scanner(System.in);
 		int playAgen =0;

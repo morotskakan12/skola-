@@ -3,8 +3,8 @@ public class ComputerSolv{
 	public static int solv(int svar, int startMax){
 		// initsierar variabler 
 		int max = startMax;
-		int mine = 1;
-		int ansor =1000;
+		int ansor =999;
+		int mine=1;
 		int i =0;
 		int index =0; 
 		// initsierar lopp
@@ -19,8 +19,8 @@ public class ComputerSolv{
 				
 			mine = ansor -1;			
 		}
-		// gissar på ett värde mellan angicna värden 
-		ansor = (int)(Math.random() * max + mine);
+		// gissar på ett värde mellan angicna värden random vardet blir nåbon stans mellan mine värdet + max värde därför (max-mine)
+		ansor = (int)(Math.random() * (max-mine) + mine);
 		System.out.println(ansor);
 		// räknar intrektoner 
 		i++;
