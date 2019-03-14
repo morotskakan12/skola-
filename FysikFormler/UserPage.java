@@ -5,14 +5,13 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class UserPage extends JFrame implements ActionListener{
-	private JLabel l1 = new JLabel(new ImageIcon("bildett.jpg"));
-	private JLabel l2 = new JLabel (new ImageIcon("bildtvå.jpg"));
+	private JLabel l2 = new JLabel(new ImageIcon("bildtvo.jpg"));
 	private JLabel l3 = new JLabel(new ImageIcon("bildtre.jpg"));
-	private JScrollPane scroll = new JScrollPane(l1);
+	private JScrollPane scroll = new JScrollPane();
 	private JPanel p = new JPanel();
 	private JTextField t1 = new JTextField();
-	private JButton b1 = new JButton("OK");
-	private JButton b2 = new JButton("OKo");
+	private JButton b1 = new JButton("Mekanik");
+	private JButton b2 = new JButton("Tryk");
 	private JButton b3 = new JButton("OKok");
 	private JButton b4 = new JButton("Exit");
 	private JButton b5 = new JButton("select");
@@ -20,10 +19,9 @@ public class UserPage extends JFrame implements ActionListener{
 	
 	public UserPage(){
 		add(split);
-		scroll.setMinimumSize(new Dimension(100,100));
+		scroll.setMinimumSize(new Dimension(120,100));
 		p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
 		t1.setSize(new Dimension(10, 5));
-		
 		p.add(b1);p.add(b2);p.add(b3); p.add(t1);p.add(b5);p.add(b4);
 		b1.setBorderPainted(false);b1.addActionListener(this);
 		b2.setBorderPainted(false);b2.addActionListener(this);
@@ -31,25 +29,32 @@ public class UserPage extends JFrame implements ActionListener{
 		b4.setBorderPainted(false);b4.addActionListener(this);
 		b5.setBorderPainted(false);b5.addActionListener(this);
 		t1.addActionListener(this);
-		setSize(350,250);
+		setSize(390,230);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
 	}
 	public void actionPerformed (ActionEvent e){
 		if(e.getSource() == b1){
-		scroll.setViewportView(l1);
+		Mekanik M =	new Mekanik();
+		scroll.setViewportView(M);
+		M.setVisible(true);
+		
 		}
 		else if (e.getSource() == b2){
-		scroll.setViewportView(l2);
+			Tryk T = new Tryk();
+			scroll.setViewportView(T);
+			T.setVisible(true);
 		}
 		else if (e.getSource() == b3){
-		scroll.setViewportView(l3);
+			scroll.setViewportView(l3);
 		}
 		else if (e.getSource () == b5){
 		
 			String strV0TextBox = t1.getText();
 			
-			double impot = Double.parseDouble(strV0TextBox);
+			//double impot = Double.parseDouble(strV0TextBox);
+			double impot = new Double(strV0TextBox);
 			
 			if (WhichFormal.whichFormal(impot)==0){
 				

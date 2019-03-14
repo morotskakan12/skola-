@@ -130,9 +130,9 @@ public class Formula {
 
 		public static double svtVelocity(double distance, double time){//12
 
-			double Speed= distance/time;
+			double Velocity= distance/time;
 
-			return Speed;
+			return Velocity;
 
 		}
 

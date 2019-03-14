@@ -1,8 +1,7 @@
-package arryar;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
-public class Nummber {
+
+public class testa {
 
 	static int[] numbers = {1,1,1,2,6,7,8,4,3,7,8,9,3,1,3,7,8,5,3,4,8,9,6,4,2,4,7,9,7,4,3,2,3,6,7,8,7,7,5,7,9,6,1,4,0,8,6,5,6,8,9,0,7,5,4,3,2,4,5,9,8,5,9,8,8,4,5,6,7,8,9,0,9,0,9,7,5,2,1,2,3,4,5,4,4,5,3,4,5,0,8,7,0,7,9,7,0,6,5,4};
 
@@ -11,7 +10,7 @@ public class Nummber {
 	static String[] names = {"Crystal","Tam","Ed","Beulah","Daina","Benjamin","Kia","Clelia","Cassy","Gita","Celsa","Karoline","Talitha","Lewis","Betsy","Colin","Glendora","Carola","Rosalba","Jeanie","Yevette","Armand","Neal","Lilla","Dorethea","Delta","Maye","Nikita","Shoshana","Carola","Margie","Haywood","Venessa","Natacha","Gilbert","Kandi","Tyisha","Tammie","Blossom","Penney","Diana","Audrey","Willard","Zoraida","Drusilla","Jacquline","Cyndy","Janiece","Tressie","Kami","Lashanda","Leann","Tom","Santana","Junita","Gisela","Tom","Marquerite","Bryant","Lauralee","Yael","Kelle","Samantha","Tom","Meta","Lanette","Wanetta","Carola","Jana","Neal","Brady","Rigoberto","Felicia","Hellen","Georgeann","Carola","Isaias","Ellis","Roseanne","Lenard","Ela","Ophelia","Alesha","Mafalda","Flor","Kelsi","Autumn","Sondra","Pasty","Jacquelyne","Benjamin","Emmie","Mickie","Lang","Jamee","Felice","Daniella","Carola","Nathalie","Genevive"};
 	 
 	public static void main(String[] args) {
-		// kör alla mitoder 1-10
+		// kÃ¶r alla mitoder 1-10
 		System.out.println(amunt());
 		System.out.println(tom());
 		System.out.println(itNumber());
@@ -29,7 +28,7 @@ public class Nummber {
 		//akpar aktuela variabler. 
 		int tims = numbers.length;
 			int ansor = 0;
-			//identiifera alla numer av värder 7.
+			//identiifera alla numer av vÃ¤rder 7.
 			for(int i = 0 ; i < tims; i++ ) {
 				
 				if (numbers[i] == 7) {
@@ -43,7 +42,7 @@ public class Nummber {
 		//skapa aktuella variabeler.
 		int ansor = 0;
 		int tims = names.length;
-		//identiferar altuela namn i listan och läger till ett vid träff
+		//identiferar altuela namn i listan och lÃ¤ger till ett vid trÃ¤ff
 		for(int i = 0 ; i < tims; i++ ) {
 			if (names[i].equals("Tom")||names[i].equals("tom")) {
 				ansor++;
@@ -62,19 +61,19 @@ public class Nummber {
 		
 		// skaper arrey
 		int [] index = new int [10];
-		// tästa nummer mellan 1-9
+		// tÃ¤sta nummer mellan 1-9
 			for(int i = 0 ; i < 10; i++ ) {
 				conter = 0;
-				//ser om nummer är lika.
+				//ser om nummer Ã¤r lika.
 				for(int e = 0; e<tims; e++) {
 					if (numbers[e] == i) {
 						conter++;
 					}
-				//lägger till antal
+				//lÃ¤gger till antal
 					index[i]=conter;
 				}
 			}
-		// hitta det minsta värdet
+		// hitta det minsta vÃ¤rdet
 		        for (int i = 0; i < index.length - 1; i++) {
 		          
 		            if ( outnum2 > index[i+1]) {
@@ -91,7 +90,7 @@ public class Nummber {
 		//skapa aktuella variabler.
 		int ansor = 0;
 		int tims = names.length;
-		//söker aktuelt namn och retunerarn platsen i listan 
+		//sÃ¶ker aktuelt namn och retunerarn platsen i listan 
 		for(int i = 0 ; i < tims; i++ ) {
 			if (names[i].equals("Drusilla")){
 				ansor= i;
@@ -104,7 +103,7 @@ public class Nummber {
 		//skaper aktuela variaber
 		int ansor = 0;
 		int tims = numbers.length;
-		//söker efeer och adderar aktuella värden 
+		//sÃ¶ker efeer och adderar aktuella vÃ¤rden 
 		for(int i = 0 ; i < tims; i++ ) {
 			if(numbers[i]==2||numbers[i]==4||numbers[i]==6||numbers[i]==8) {
 				ansor= ansor+ numbers[i];
@@ -120,7 +119,7 @@ public class Nummber {
 		int ansor = 0;
 		int tims = names.length;
 		char oneLetter;
-		//söker för en angiven bokstav på fursta platsen i stringen. ifall träff addera med ett i int
+		//sÃ¶ker fÃ¶r en angiven bokstav pÃ¥ fursta platsen i stringen. ifall trÃ¤ff addera med ett i int
 		for(int i = 0 ; i < tims; i++ ) { 
 			oneLetter = names[i].charAt(0);
 			
@@ -137,7 +136,7 @@ public class Nummber {
 		String str;
 		 int ansor =0;
 		 int tims = names.length;
-		 //kollar hela listan eferer or som ineholler fem bokstäver;
+		 //kollar hela listan eferer or som ineholler fem bokstÃ¤ver;
 		for(int i = 0 ; i < tims; i++ ) { 
 			str = names[i];
 			
@@ -153,19 +152,19 @@ public class Nummber {
 		int tims = numbers.length;
 		int conter = 0;
 		int [] indexx = new int [10];
-		//lägger till väden i listat indexx
+		//lÃ¤gger till vÃ¤den i listat indexx
 		for(int i = 0 ; i < 10; i++ ) {
 			conter = 0;
-			//söker efeter dubbleter av en sifra och räknar dem.
+			//sÃ¶ker efeter dubbleter av en sifra och rÃ¤knar dem.
 			for(int e = 1; e<tims; e++) {
 				if (numbers[e] == i) {
 					conter++;
 				}
-				//lägger till resultatet från söknigen 
+				//lÃ¤gger till resultatet frÃ¥n sÃ¶knigen 
 				indexx[i]=conter;
 			}
 		}
-		//skriver ut listan med tillhörande sifra. 
+		//skriver ut listan med tillhÃ¶rande sifra. 
 		for (int i = 0; i<10; i++) {
 			System.out.println(indexx[i]+"of nr"+i);
 		}
@@ -180,9 +179,9 @@ public class Nummber {
 		for(int i = 0 ; i < tims; i++ ) {
 			bas = names[i];
 			for (int e = 0; e<tims; e++) {
-				//stop för att inte gämföra med sin egen plats.
+				//stop fÃ¶r att inte gÃ¤mfÃ¶ra med sin egen plats.
 				if (i!=e) {
-					//bryt lopp och tästa nästa om den hittar dubletter anars lägg till värde 
+					//bryt lopp och tÃ¤sta nÃ¤sta om den hittar dubletter anars lÃ¤gg till vÃ¤rde 
 					if(bas.equals(names[e])) {
 						break;	
 					}
@@ -208,11 +207,11 @@ public class Nummber {
 			//med tanke att varge int plats i listan ska ha en motsvarighet i namnlistan.
 			
 			int [] how = new int [100];
-			// avgör hur många namn det fin av ett namn och gar en motsvarande sifra i how
+			// avgÃ¶r hur mÃ¥nga namn det fin av ett namn och gar en motsvarande sifra i how
 			for(int i = 0 ; i < tims; i++ ) {
 				bas = names[i];
 				apa= 0;
-				//avgör och lägger till motsvarande sifra.
+				//avgÃ¶r och lÃ¤gger till motsvarande sifra.
 				for (int e = 0; e<tims; e++) {
 					
 						if(bas.equals(names[e])) {
@@ -221,9 +220,9 @@ public class Nummber {
 				}
 				how[i] = apa;
 				}
-				// ser vilket som är det sstörsta värdet i listan. 
-				// jag inser att det kommer att finas flera nomnet med det största antalet.
-				//så den kommer att velja den sitat i raden om kommer att var nomnet på motsvarande plat i namn listan. 
+				// ser vilket som Ã¤r det sstÃ¶rsta vÃ¤rdet i listan. 
+				// jag inser att det kommer att finas flera nomnet med det stÃ¶rsta antalet.
+				//sÃ¥ den kommer att velja den sitat i raden om kommer att var nomnet pÃ¥ motsvarande plat i namn listan. 
 				//
 				for (int z = 0; z < how.length; z++) {
 					for(int e =0; e<how.length;e++) {

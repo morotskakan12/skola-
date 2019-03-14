@@ -14,7 +14,7 @@ private JTextField t2 = new JTextField ("number");
 		private	JLabel l2 = new JLabel();
 		double send = 0;
 			public FormelaImpotTwo(double impot){
-				double send = impot;
+				this.send = impot;
 				l1 = new JLabel ("svar");
 				setSize(150,150);
 				setLayout(new FlowLayout());

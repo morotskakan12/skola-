@@ -29,6 +29,7 @@ public class MenuArrye{
         // anroper bubblesort-metoden och skriver ut antal iterationer
         if (which==1){ 
 		System.out.println("It took " + BubbleSort.bubbleSort(randomNumbers) + " iterations to sort the int array using" +" bubbleSort algorithm.\n");
+		
 		}
 		if (which==2){
 		System.out.println("It took " + InsertionSort.insertionSort(randomNumbers) + " iterations to sort the int array using" +" insertionSort algorithm");

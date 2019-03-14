@@ -6,7 +6,7 @@ public class PerformFormula{
 			if(impot == 1){
 
 				svar = Formula.fahrenheitToCelsius(ett);
-
+				
 			} 
 
 			else if(impot == 2 ){
