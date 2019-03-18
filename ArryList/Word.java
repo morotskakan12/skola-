@@ -52,7 +52,7 @@ public class Word{
 	
 	
 	
-	public String word (String keyword, String investigation){
+	public static String word (String keyword, String investigation){
 		String result = "";
 		int indexInvestigation = 0 ; 	
 		int indexKeyWord = 0 ;
@@ -75,7 +75,7 @@ public class Word{
 		return result;
 	}
 	
-	public String sekendWord (String oneWord){
+	public static String sekendWord (String oneWord){
 		String name = "";
 		for (int i = 0; i<oneWord.length(); i++){
 			char letter = oneWord.charAt(i);
@@ -90,7 +90,7 @@ public class Word{
 		}
 		return name;
 	}
-	public String fursWord (String oneWord){
+	public static String fursWord (String oneWord){
 		String name = "";
 		for (int i = 0; i<oneWord.length(); i++){
 			char letter = oneWord.charAt(i);
@@ -100,7 +100,7 @@ public class Word{
 			name += letter;
 			}
 			 
-		}
+		
 		return name;
 	}
 	public static void arrylistPrint(ArrayList<String> arry ){
@@ -113,23 +113,40 @@ public class Word{
 		ArrayList<Integer> index = new ArrayList<Integer>();
 		String exited = "exited";
 		String entered = "entered";
+		boolean animaly;
 		for(int i = 0; i<arrys.size()-1; i++){
 			if (arrys.get(i).equals(arrys.get(i+1))){
 				index.add(i+1);
 			}
 		}
+		
 		for(int i = 0; i <arrys.size(); i++){ 
-			bolen 
-			if (word(exited,arrys.get(i)).equals(exited)){
-				for(int e= i-1;e==0;e--){
-					if(fursWord(arrys.get(i))+""+entered == arrys.get(e)){
-						
+			if ((i==0)&&(word(exited,arrys.get(i)).equals(exited))){
+				index.add(i);
+			}  
+			if (((i!=0)&&(word(exited,arrys.get(i)).equals(exited)))){
+				animaly = true;
+				int e = i-1;
+				while(e!=0){
+					
+					System.out.println("");
+					if(fursWord(arrys.get(i))== fursWord(arrys.get(e))){
+						System.out.println(fursWord(arrys.get(i)));
+						System.out.println(fursWord(arrys.get(e)));
+						if(word(entered,arrys.get(e)).equals(entered)){
+						animaly = false;
+						break;
+						}
 					}
+					e--;
+				}
+				if (animaly == true){
+					index.add(i);
 				}
 			}
 		}
 		for(int i = 0; i<index.size();i++){
-			arrys.set(index.get(i), "(ANOMALY)");
+			arrys.set(index.get(i),arrys.get(index.get(i)) + "(ANOMALY)");
 		}
 		return arrys;
 	}
