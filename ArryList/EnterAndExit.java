@@ -31,27 +31,7 @@ public class EnterAndExit{
 		}
 		arrylistPrint(printList);
 	}
-	public static ArrayList<String> userImpot(){
-		Scanner sc = new Scanner(System.in);
-		ArrayList<String> userIm = new ArrayList<>();
-		String namnIn;
-		System.out.println("how many times your employees go in and out.");
-		int index = sc.nextInt();
-			for(int i = 0; i<index;i++){ 
-				System.out.println("name");
-				namnIn = sc.nextLine();
-				System.out.println("entry or exit");
-				namnIn = namnIn+""+sc.nextLine();
-				userIm.add(namnIn);
-			}
-			return userIm;
-	}
-	public static void systemOut(ArrayList<String> namn){
-		ArrayList<String> outpott = new ArrayList<>();
-		for (int i = 0; i<namn.size();i++){
-			if()
-		}
-	}
+	
 	public static void arrylistPrint(ArrayList arry){
 		for (int i = 0; i < arry.size(); i++) {
 			System.out.println(arry.get(i) + " ");
