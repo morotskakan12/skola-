@@ -10,7 +10,7 @@ public class startPeag{
 		boolean lopp= true;
 		boolean innerLopp= true;
 		// två funktoner om man vill starra om spelet och om men skriver in fel ska pogramet inte stängas ner 
-		System.out.println("hej och välkomen.");
+		System.out.println("hej och v�lkomen.");
 		// initcierar pogram lopp som bryt när lopp en endras till fals 
 		while(lopp == true){
 			innerLopp= true;

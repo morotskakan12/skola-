@@ -21,9 +21,18 @@ public class Game{
 				while (hp<0) {
 					guess = metod.gess(sc); 
 					if (metod.length(guess)==false) {
-						
+						if (metod.charGess(guess,gameWord)==gameWord.length()){
+							hp=hp+1;
+							
+						}
+						else{
+							
+						}
 					}else{
-						
+						if (guess.equals(gameWord)){
+							//vinst skärm
+							break;
+						}
 					}
 				}
 			}else if (vanligt.equals("Vanlig")){
@@ -33,14 +42,17 @@ public class Game{
 					if (metod.length(guess)==false) {
 						
 					}else{
-						
+						if (guess.equals(gameWord)){
+							//vinst skärm
+							break;
 					}
 				}
 				lopp = false;
+			}
 			}else {
 				System.out.println("du kan bara skriva 18+ eller vanligt");
 				System.out.println("");
-			}
+			
 			}
 		}
 		//multiplyer
@@ -54,11 +66,15 @@ public class Game{
 					if (metod.length(guess)==false) {
 						
 					}else{
-						
-					}
+						if (guess.equals(gameWord)){
+							//vinst skärm
+							break;
+						}
+					}	
 				}
-			}
 		
+			}
+		}
 		}
 	}
 }

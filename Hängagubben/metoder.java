@@ -47,4 +47,14 @@ public class metoder{
 			return true;
 		}
 	}
+	public static int charGess(String gess, String hiddenWord) {
+		int i = 0;
+		for(i = 0;i<hiddenWord.length();i++) {
+		char myChar = hiddenWord.charAt(i);
+			if (gess.equals(myChar)) {
+				return i;
+			}
+		}																																				
+		return i+1;
+	}
 }
