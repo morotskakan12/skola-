@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class metoder{
@@ -21,12 +22,12 @@ public class metoder{
 		return true;
 	}
 	public static String singelPlayVanlig() {
-		String[] word = {"","hej","apa","hoppa"};
+		String[] word = {"hej","apa","hoppa"};
 		int random = (int)(Math.random() * 2 + 1);
 		return word[random];
 	}
 	public static String singelPlay18() {
-		String[] word = {"","hej","apa","hoppa"};
+		String[] word = {"hej","apa","hoppa"};
 		int random = (int)(Math.random() * 2 + 1);
 		return word[random];
 	}
@@ -49,12 +50,20 @@ public class metoder{
 	}
 	public static int charGess(String gess, String hiddenWord) {
 		int i = 0;
+		char newGess = gess.charAt(0);
 		for(i = 0;i<hiddenWord.length();i++) {
-		char myChar = hiddenWord.charAt(i);
-			if (gess.equals(myChar)) {
+			char myChar = hiddenWord.charAt(i);	
+			if (newGess == (myChar)) {
 				return i;
 			}
 		}																																				
 		return i+1;
+	}
+	public static ArrayList<Character> emty(String balnk) {
+		ArrayList<Character> em= new ArrayList<Character>();
+		for (int i= 0;i<balnk.length();i++) {
+			em.add('-');
+		}
+		return em;
 	}
 }

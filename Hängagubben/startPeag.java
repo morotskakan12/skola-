@@ -9,6 +9,7 @@ public class startPeag{
 		Scanner sc = new Scanner(System.in);
 		boolean lopp= true;
 		boolean innerLopp= true;
+		boolean singelMulti = true;
 		// två funktoner om man vill starra om spelet och om men skriver in fel ska pogramet inte stängas ner 
 		System.out.println("hej och v�lkomen.");
 		// initcierar pogram lopp som bryt när lopp en endras till fals 
@@ -21,7 +22,9 @@ public class startPeag{
 		// val av händelse 
 		if ((hiddenWord.equals("Singelplayer"))||(hiddenWord.equals("singelplayer"))){
 			// mitoden för att köra pogramet igen eller inte
+			singelMulti = true;
 			while(innerLopp==true){
+				Game Game = new Game(singelMulti);
 					System.out.println("vill du spela igen");
 					System.out.println("svara Ja eller Nej");
 					System.out.println("");
@@ -40,7 +43,9 @@ public class startPeag{
 			}
 		}else if ((hiddenWord.equals("Multiplyer"))||(hiddenWord.equals("multiplyer"))){
 			// mitoden för att köra pogramet igen eller inte
+			singelMulti = false;
 			while(innerLopp==true){
+				Game Game = new Game(singelMulti);
 				System.out.println("vill du spela igen");
 				System.out.println("svara Ja eller Nej");
 				System.out.println("");
