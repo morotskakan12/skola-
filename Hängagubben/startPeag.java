@@ -30,8 +30,7 @@ public class startPeag{
 					System.out.println("");
 					String playagen = sc.nextLine();
 				if (playagen.equals("Nej")){
-					lopp = false;
-					innerLopp= false;
+					break;
 				}else if(playagen.equals("Ja")){
 					innerLopp= false;
 				}else{
@@ -51,8 +50,7 @@ public class startPeag{
 				System.out.println("");
 				String playagen = sc.nextLine();
 				if (playagen.equals("Nej")){
-					lopp = false;
-					innerLopp= false;
+					break;
 				}else if(playagen.equals("Ja")){
 					innerLopp= false;
 			
