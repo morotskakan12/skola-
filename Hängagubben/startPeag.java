@@ -66,6 +66,7 @@ public class startPeag{
 		
 	}
 	//avslut
+		
 		System.out.println("");
 		System.out.println("basi basi");
 		

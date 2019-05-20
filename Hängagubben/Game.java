@@ -29,28 +29,25 @@ public class Game {
 					blank = metod.emty(gameWord);
 					lopp = false;
 					while (hp > 0) {
-						grafik.emty();
+						
 						System.out.println(blank);
 						System.out.println(gameWord);
+						System.out.println("du har gissat på följande bokstäver");
 						System.out.println(gesstLetter);
-						System.out.println("gissa på en bokstav eller ord");
 						guess = metod.gess(sc,gesstLetter);
-						System.out.println(metod.charGess(guess, gameWord));
-						System.out.println((gameWord.length() + 1));
-						System.out.println(metod.length(guess));
 						if (metod.length(guess) == false) {
 
 							if (metod.charGess(guess, gameWord).size() == 0) {
-								gesstLetter.add(guess);
 								hp = hp - 1;
-
+								gesstLetter.add(guess);	
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 								// mitod flr att visa upp grafis guben.
 							} else {
 								gesstLetter.add(guess);
 								ArrayList<Integer> index = new ArrayList<Integer>();
 								index = metod.charGess(guess, gameWord);
 								for (int i = 0; i < index.size(); i++) {
-									System.out.println(index.get(i));
 									blank.set(index.get(i), guess.charAt(0));
 								}
 								char[] namn = new char[blank.size()];
@@ -60,16 +57,20 @@ public class Game {
 								if (metod.word(namn, gameWord)) {
 									break;
 								}
-
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 								// blank.replace(oldChar, newChar)
 							}
 						} else {
 							if (guess.equals(gameWord)) {
+								grafik.vinst();
 								// vinst skärm
 								break;
 							} else {
 								// visa upp att med gubben att spelan hadde fel
 								hp = hp - 1;
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 							}
 
 						}
@@ -79,35 +80,28 @@ public class Game {
 				//18+ singelplayer spel slut
 				//valint singelplyer spel start
 				else if (vanligt.equals("vanligt")) {
-					System.out.println("grattis du har valt 18+");
+					System.out.println("grattis du har valt vanligt");
 					gameWord = metod.singelPlayVanlig();
 					blank = metod.emty(gameWord);
 					lopp = false;
 					while (hp > 0) {
 						System.out.println(blank);
 						System.out.println(gameWord);
-						System.out.println("gissa på en bokstav eller ord");
+						System.out.println("du har gissat på följande bokstäver");
+						System.out.println(gesstLetter);
 						guess = metod.gess(sc,gesstLetter);
-						if (metod.Wrongimpot(guess) == false)
-							do {
-
-								System.out.println("gissa på en bokstav eller ord");
-								guess = metod.gess(sc,gesstLetter);
-							} while (metod.Wrongimpot(guess) == false);
-						System.out.println(metod.charGess(guess, gameWord));
-						System.out.println((gameWord.length() + 1));
-						System.out.println(metod.length(guess));
 						if (metod.length(guess) == false) {
 
 							if (metod.charGess(guess, gameWord).size() == 0) {
 								hp = hp - 1;
-
+								gesstLetter.add(guess);	
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 								// mitod flr att visa upp grafis guben.
 							} else {
 								ArrayList<Integer> index = new ArrayList<Integer>();
 								index = metod.charGess(guess, gameWord);
 								for (int i = 0; i < index.size(); i++) {
-									System.out.println(index.get(i));
 									blank.set(index.get(i), guess.charAt(0));
 								}
 								char[] namn = new char[blank.size()];
@@ -117,16 +111,20 @@ public class Game {
 								if (metod.word(namn, gameWord)) {
 									break;
 								}
-
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 								// blank.replace(oldChar, newChar)
 							}
 						} else {
 							if (guess.equals(gameWord)) {
+								grafik.vinst();
 								// vinst skärm
 								break;
 							} else {
 								// visa upp att med gubben att spelan hadde fel
 								hp = hp - 1;
+								grafik.emty();
+								grafik.gubenVanlig(hp);
 							}
 
 						}
@@ -143,44 +141,28 @@ public class Game {
 			//singelplayer slut
 			// multiplyer 
 		} else if (gameType == false) {
-			System.out.println("skriv in dit ord");
-			gameWord = sc.nextLine();
-			blank = metod.emty(gameWord);
-			grafik.emty();
 			lopp = false;
-			if (metod.Wrongimpot(gameWord) == false) {
-				do {
-					System.out.println("du måste anvenda bokstäver");
-					gameWord = sc.nextLine();
-					blank = metod.emty(gameWord);
-					grafik.emty();
-				} while (metod.Wrongimpot(gameWord) == false);
-			}
-			while (hp > 0) {
+				gameWord = metod.gess(sc,gesstLetter);
+				blank = metod.emty(gameWord);
 				grafik.emty();
+
+			while (hp > 0) {
 				System.out.println(blank);
 				System.out.println(gameWord);
+				System.out.println(gesstLetter);
 				guess = metod.gess(sc,gesstLetter);
-				if (metod.Wrongimpot(guess) == false)
-					do {
-
-						System.out.println("gissa på en bokstav eller ord");
-						guess = metod.gess(sc,gesstLetter);
-					} while (metod.Wrongimpot(guess) == false);
-				System.out.println(metod.charGess(guess, gameWord));
-				System.out.println((gameWord.length() + 1));
-				System.out.println(metod.length(guess));
+				gesstLetter.add(guess);
 				if (metod.length(guess) == false) {
 
 					if (metod.charGess(guess, gameWord).size() == 0) {
 						hp = hp - 1;
-
+						grafik.emty();
+						grafik.gubenVanlig(hp);
 						// mitod flr att visa upp grafis guben.
 					} else {
 						ArrayList<Integer> index = new ArrayList<Integer>();
 						index = metod.charGess(guess, gameWord);
 						for (int i = 0; i < index.size(); i++) {
-							System.out.println(index.get(i));
 							blank.set(index.get(i), guess.charAt(0));
 						}
 						char[] namn = new char[blank.size()];
@@ -190,21 +172,32 @@ public class Game {
 						if (metod.word(namn, gameWord)) {
 							break;
 						}
-
+						grafik.emty();
+						grafik.gubenVanlig(hp);
 						// blank.replace(oldChar, newChar)
 					}
 				} else {
 					if (guess.equals(gameWord)) {
 						// vinst skärm
+						grafik.vinst();
 						break;
 					} else {
 						// visa upp att med gubben att spelan hadde fel
 						hp = hp - 1;
+						grafik.emty();
+						grafik.gubenVanlig(hp);
 					}
 
 				}
 			}
 		}
 		//multiplayer slut
+		if (hp== 0) {
+		      System.out.println("************************************");
+		      System.out.println("***** GAME OVER - YOU LOOSE!!! *****");
+		      System.out.println("*********** HÄNGDE GUBBE ***********");
+		      System.out.println("************************************");
+		      System.out.println("************************************");
+		}
 	}
 }

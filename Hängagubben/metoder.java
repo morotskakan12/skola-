@@ -87,7 +87,7 @@ public class metoder {
 		while (lopp == false) {
 			System.out.println("gissa på en ny bokstav eller ord");
 			word = sc.nextLine();
-			if ((Wrongimpot(word))||(lettererly(arry,word)) == true) {
+			if ((Wrongimpot(word))&&(lettererly(arry,word)) == true) {
 				lopp = true;
 			}
 		}
