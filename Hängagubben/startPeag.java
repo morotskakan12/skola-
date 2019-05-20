@@ -13,7 +13,7 @@ public class startPeag{
 		// två funktoner om man vill starra om spelet och om men skriver in fel ska pogramet inte stängas ner 
 		System.out.println("hej och v�lkomen.");
 		// initcierar pogram lopp som bryt när lopp en endras till fals 
-		while(lopp == true){
+		while(lopp){
 			innerLopp= true;
 			System.out.println("svara Singelplayer or Multiplyer  ");
 			System.out.println("vill du spela Singelplayer or Multiplyer");
@@ -23,15 +23,16 @@ public class startPeag{
 		if ((hiddenWord.equals("Singelplayer"))||(hiddenWord.equals("singelplayer"))){
 			// mitoden för att köra pogramet igen eller inte
 			singelMulti = true;
-			while(innerLopp==true){
+			while(innerLopp){
 				Game Game = new Game(singelMulti);
 					System.out.println("vill du spela igen");
 					System.out.println("svara Ja eller Nej");
 					System.out.println("");
 					String playagen = sc.nextLine();
-				if (playagen.equals("Nej")){
-					break;
-				}else if(playagen.equals("Ja")){
+				if (playagen.toLowerCase().equals("nej")){
+					lopp= false;
+					innerLopp= false;
+				}else if(playagen.toLowerCase().equals("Ja")){
 					innerLopp= false;
 				}else{
 				// ifal anvenaren skriver fel
@@ -43,18 +44,18 @@ public class startPeag{
 		}else if ((hiddenWord.equals("Multiplyer"))||(hiddenWord.equals("multiplyer"))){
 			// mitoden för att köra pogramet igen eller inte
 			singelMulti = false;
-			while(innerLopp==true){
+			while(innerLopp){
 				Game Game = new Game(singelMulti);
 				System.out.println("vill du spela igen");
 				System.out.println("svara Ja eller Nej");
 				System.out.println("");
 				String playagen = sc.nextLine();
-				if (playagen.equals("Nej")){
-					break;
-				}else if(playagen.equals("Ja")){
+				if (playagen.toLowerCase().equals("nej")){
+					lopp= false;
 					innerLopp= false;
-			
-				}
+				}else if(playagen.toLowerCase().equals("Ja")){
+					innerLopp= false;
+					}
 			}
 		}
 		// ifal anvenaren skriver fel
@@ -67,6 +68,7 @@ public class startPeag{
 	//avslut
 		System.out.println("");
 		System.out.println("basi basi");
+		
 	}
 
 }
