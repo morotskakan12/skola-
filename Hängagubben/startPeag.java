@@ -14,48 +14,53 @@ public class startPeag{
 		System.out.println("hej och v�lkomen.");
 		// initcierar pogram lopp som bryt när lopp en endras till fals 
 		while(lopp){
-			innerLopp= true;
+			innerLopp = true;
 			System.out.println("svara Singelplayer or Multiplyer  ");
-			System.out.println("vill du spela Singelplayer or Multiplyer");
+			System.out.println("vill du spela Singelplayer(s) or Multiplyer(m)");
 			String hiddenWord = sc.nextLine();
 			System.out.println("");
 		// val av händelse 
-		if ((hiddenWord.equals("Singelplayer"))||(hiddenWord.equals("singelplayer"))){
+		if ((hiddenWord.equals("Singelplayer"))||(hiddenWord.equals("singelplayer")||(hiddenWord.equals("s")))){
 			// mitoden för att köra pogramet igen eller inte
 			singelMulti = true;
+			Game Game = new Game(singelMulti);
 			while(innerLopp){
-				Game Game = new Game(singelMulti);
 					System.out.println("vill du spela igen");
 					System.out.println("svara Ja eller Nej");
 					System.out.println("");
 					String playagen = sc.nextLine();
-				if (playagen.toLowerCase().equals("nej")){
+				if (playagen.toLowerCase().equals("nej")||playagen.equals("n")){
 					lopp= false;
 					innerLopp= false;
-				}else if(playagen.toLowerCase().equals("Ja")){
+				}else if(playagen.equals("Ja")||playagen.equals("ja")||playagen.equals("j")){
 					innerLopp= false;
 				}else{
 				// ifal anvenaren skriver fel
 					System.out.println("fel g�r om");
-					System.out.println("svaera ja eller nej");
+					System.out.println("svara ja eller nej");
 					System.out.println("");
 				}
 			}
-		}else if ((hiddenWord.equals("Multiplyer"))||(hiddenWord.equals("multiplyer"))){
+		}else if ((hiddenWord.equals("Multiplyer"))||(hiddenWord.equals("multiplyer")||(hiddenWord.equals("m")))){
 			// mitoden för att köra pogramet igen eller inte
 			singelMulti = false;
-			while(innerLopp){
-				Game Game = new Game(singelMulti);
+			Game Game = new Game(singelMulti);
+			while(innerLopp == true){
 				System.out.println("vill du spela igen");
-				System.out.println("svara Ja eller Nej");
+				System.out.println("svara Ja(j) eller Nej(n)");
 				System.out.println("");
 				String playagen = sc.nextLine();
-				if (playagen.toLowerCase().equals("nej")){
+				if (playagen.toLowerCase().equals("nej")||playagen.equals("n")){
 					lopp= false;
 					innerLopp= false;
-				}else if(playagen.toLowerCase().equals("Ja")){
+				}else if(playagen.equals("Ja")||playagen.equals("ja")||playagen.equals("j")){
 					innerLopp= false;
 					}
+				else {
+					System.out.println("svara Ja eller Nej");
+					System.out.println();
+				}
+				
 			}
 		}
 		// ifal anvenaren skriver fel

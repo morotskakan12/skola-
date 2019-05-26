@@ -10,7 +10,7 @@ public class metoder {
 	 * @return sant eller falst
 	 */
 	public static boolean Wrongimpot(String impot) {
-		char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+		char[] alphabet = "abcdefghijklmnopqrstuvwxyzåäö".toCharArray();
 
 		// impot.equals("abcdefghijklmnopqrstuvwxyz");
 		int i = 0;
@@ -39,8 +39,8 @@ public class metoder {
 	 */
 
 	public static String singelPlayVanlig() {
-		String[] word = { "hej", "apa", "hoppa" };
-		int random = (int) (Math.random() * 2 + 1);
+		String[] word = {"sickat","djul","koppar","stål","metall","stol","konstig","konst","måla","målnig","grilla","spis","fötter","hand","film","katt","hund","hona","kviga","glass","glas","muskler","musik","data","hej", "apa", "hoppa","gå","lillen","pannkaka","saft","mat","juice","boll","innebandy","fottboll","gubbe","drake","hänga","fel", };
+		int random = (int) (Math.random() * 39 + 1);
 		return word[random];
 	}
 
@@ -52,8 +52,8 @@ public class metoder {
 	 * @return ett slumpesigt valt ord
 	 */
 	public static String singelPlay18() {
-		String[] word = { "hej", "apa", "hoppa" };
-		int random = (int) (Math.random() * 2 + 1);
+		String[] word = { "","pippa","kärlek","pocketpussy","jägermeister","rom","vodka","vin","cider","öl","shot","chug","fuckthedealer","jappa","djävulenstrekant","trekant","anal","bwd","bbc","milf","xxnx","xhamster","redtube","pornhub","glädjepojke","glädjeflicka","sex","sextinian", "bordell", "hora" };
+		int random = (int) (Math.random() * 29 + 1);
 		return word[random];
 	}
 
