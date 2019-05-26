@@ -108,10 +108,11 @@ public class Game {
 								hp = hp - 1;
 								//lägger till så att anvendaren kan se vilaka hen har gissat på
 								gesstLetter.add(guess);	
-								// mitod flr att visa upp grafis guben.
-							} else {
+									} else {
 								index = metod.charGess(guess, gameWord);
 								for (int i = 0; i < index.size(); i++) {
+									//lägger till charen til areyliseten. behövde glr aom datatyper för att den skulle kunnas läggas till
+									
 									blank.set(index.get(i), guess.charAt(0));
 								}
 								char[] namn = new char[blank.size()];
@@ -155,11 +156,12 @@ public class Game {
 			lopp = false;
 			System.out.println("siriv in det ordet ni vill spela med:");
 			System.out.println("anlednigen till texten under är att jag är lat");	
+			//anvendararen väljar ordet som ska spelas med
 			gameWord = metod.gess(sc,gesstLetter);
 				
 				blank = metod.emty(gameWord);
 				grafik.emty();
-
+				//spelat startar
 			while (hp > 0) {
 				grafik.emty();
 				grafik.gubenVanlig(hp);
@@ -170,15 +172,18 @@ public class Game {
 				guess = metod.gess(sc,gesstLetter);
 				
 				if (metod.length(guess) == false) {
-
+					//ifall det fin dubletter är det en int ietälet för en boolen
 					if (metod.charGess(guess, gameWord).size() == 0) {
 						hp = hp - 1;
+						//lägger till så att anvendaren kan se vilaka hen har gissat på
+						
 						gesstLetter.add(guess);
 						grafik.emty();
 						grafik.gubenVanlig(hp);
-						// mitod flr att visa upp grafis guben.
+						
 					} else {
-
+						//lägger till charen til areyliseten. behövde glr aom datatyper för att den skulle kunnas läggas till
+						
 						index = metod.charGess(guess, gameWord);
 						for (int i = 0; i < index.size(); i++) {
 							blank.set(index.get(i), guess.charAt(0));
@@ -187,6 +192,7 @@ public class Game {
 						for (int i = 0; i < blank.size(); i++) {
 							namn[i] = blank.get(i);
 						}
+						//vinst
 						if (metod.word(namn, gameWord)) {
 							System.out.println("ditt ord var");
 							System.out.println(gameWord);
@@ -194,7 +200,7 @@ public class Game {
 							break;
 						}
 						
-						// blank.replace(oldChar, newChar)
+						
 					}
 				} else {
 					if (guess.equals(gameWord)) {
